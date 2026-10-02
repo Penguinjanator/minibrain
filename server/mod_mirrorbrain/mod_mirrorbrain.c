@@ -2568,12 +2568,6 @@ static int mb_handler(request_rec *r)
                                                              ap_escape_uri(r->pool, thisserver), 
                                                              thisport, 
                                                              ap_escape_uri(r->pool, r->uri));
-            /* also sets it as webseed */
-            APR_ARRAY_PUSH(m, char *) = 
-                apr_psprintf(r->pool, "&ws=%s://%s%s%s", ap_http_scheme(r), 
-                                                             ap_escape_uri(r->pool, thisserver), 
-                                                             thisport, 
-                                                             ap_escape_uri(r->pool, r->uri));
 
             if (!apr_is_empty_array(scfg->tracker_urls)) {
                 for (i = 0; i < scfg->tracker_urls->nelts; i++) {
