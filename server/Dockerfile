@@ -1,4 +1,4 @@
-FROM docker.io/library/httpd:2.4.67
+FROM docker.io/library/httpd:2.4
 LABEL org.opencontainers.image.source=https://github.com/kiwix/minibrain
 
 # TARGETPLATFORM is injected by docker build
